@@ -15,9 +15,9 @@ print()
 
 w = int(input("width: "))
 h = int(input("height: "))
-W = w*2
+W = w
 
-for r in range(h): 
+for r in range(h):   
     
     for s in range(w):
         if r == 0 or r == h-1:
@@ -28,11 +28,11 @@ for r in range(h):
             print("|", end="")
         elif s == 1 and r == ((h/2)-1):
             print("_"*w, end="")
-        # elif r == (w/2) and s == (h/2):
-        #     print("|")    
+            if s == w/2 and r == h:
+                print("|", end="")    
    
         else:
-            print("  ", end="")
+            print(" "*2, end="")
     print()
 
 
